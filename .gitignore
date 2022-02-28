@@ -1,2 +1,50 @@
 # Please be kind and add your gitignores to keep our repo clean
 # https://github.com/github/gitignore
+
+
+# www gitignore start
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/www/dist
+/www/tmp
+/www/out-tsc
+/www/bazel-out
+
+# Node
+/www/node_modules
+/www/npm-debug.log
+/www/yarn-error.log
+
+# IDEs and editors
+/www/.idea/
+/www/.project
+/www/.classpath
+/www/.c9/
+/www/*.launch
+/www/.settings/
+/www/*.sublime-workspace
+
+# Visual Studio Code
+/www/.vscode/*
+# !/www/.vscode/settings.json
+# !/www/.vscode/tasks.json
+# !/www/.vscode/launch.json
+# !/www/.vscode/extensions.json
+/www/.history/*
+
+# Miscellaneous
+/www/.angular/cache
+/www/.sass-cache/
+/www/connect.lock
+/www/coverage
+/www/libpeerconnection.log
+/www/testem.log
+/www/typings
+
+# System files
+/www/.DS_Store
+/www/Thumbs.db
+
+# www gitignore end
