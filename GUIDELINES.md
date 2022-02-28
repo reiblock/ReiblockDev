@@ -1,7 +1,5 @@
 # GUIDELINES
 
-This is not a complete or exhaustive list of best practices.
-
 1. Use Comments Judiciously (CCC)
 2. Use Consistent Indentation
 3. Use Consistent Naming Schemes
