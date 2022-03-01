@@ -1,0 +1,87 @@
+<nav
+  class="d-md-flex justify-content-md-center"
+  [ngClass]="headerScroll ? 'scroll-menu-bar' : ''"
+>
+  <div
+    class="container menu-bar d-flex justify-content-between align-items-center px-3"
+  >
+    <div class="logo">
+      <a target="_blank" href="https://www.softobotics.com/"
+        ><img src="/assets/images/american-eagle.jpg" alt="menu"
+      /></a>
+    </div>
+    <a class="sidenav-hamberg d-md-none">
+      <img
+        *ngIf="!sideNavOpened"
+        (click)="sideNavOpened = true"
+        src="assets/images/icons/menu.png"
+        alt="hamberg"
+        height="24"
+        width="24"
+      />
+      <img
+        *ngIf="sideNavOpened"
+        (click)="sideNavOpened = false"
+        src="assets/images/icons/close-icon.png"
+        alt="hamberg"
+        height="16"
+        width="16"
+      />
+    </a>
+    <div
+      class="sidenav-mb d-md-flex align-items-md-center"
+      [class.open]="sideNavOpened"
+    >
+      <span class="sidenav-mb__hide" (click)="sideNavOpened = false"></span>
+      <div class="sidenav-mb__content" [class.open]="sideNavOpened">
+        <ul class="d-flex flex-wrap align-items-center">
+          <li>
+            <a
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLink="/"
+              >Learn</a
+            >
+          </li>
+          <li>
+            <a routerLinkActive="active" routerLink="/incest/">Invest</a>
+          </li>
+          <li>
+            <a routerLinkActive="active" routerLink="/faq/">FAQ</a>
+          </li>
+          <li>
+            <a routerLinkActive="active" routerLink="/about-us/">About US</a>
+          </li>
+          <li class="dropdown">
+            <a
+              class="d-none d-md-block"
+              routerLinkActive="active"
+              routerLink="/services/"
+              >Services<i class="dropdown-icon" aria-hidden="true"></i
+            ></a>
+            <a
+              class="d-md-none"
+              routerLinkActive="active"
+              routerLink="/services/"
+              (click)="onToggel('Service')"
+              >Services<i class="dropdown-icon" aria-hidden="true"></i
+            ></a>
+            <div class="sub-menu" #openCloseToggel id="Service">
+              <ul>
+                <li><a routerLink="/services/mobile-app">Mobile Apps</a></li>
+                <li><a routerLink="/services/web-app">Web Apps</a></li>
+                <li><a routerLink="/services/front-end">Front End</a></li>
+                <li><a routerLink="/services/back-end">Back End</a></li>
+                <li><a routerLink="/services/seo">SEO</a></li>
+                <li><a routerLink="/services/outsourcing">Outsourcing</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a [routerLink]="'/log-in/'">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
