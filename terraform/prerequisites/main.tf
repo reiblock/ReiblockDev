@@ -17,7 +17,7 @@ provider "aws" {
 # Create an s3 bucket that we can use for the backend
 
 resource "aws_s3_bucket" "backend" {
-  bucket = "reiblock-iot4-terraform-state-backend"
+  bucket = "reiblock-terraform-state-backend"
   tags = {
     Name = "Terraform State Files"
   }
