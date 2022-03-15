@@ -1,23 +1,23 @@
 
-.description{
-    height: 80vh;
+.investing-description{
+    height: 25%;
     background-color: rgba(128,128,128,0.4) ;
 }
 
-.title-space{
-    padding-top:5rem ;
-    padding-left: 5rem;
+.investing-title-space{
+    padding-top:10% ;
+    padding-left: 10%;
 }
 
 .text-size{
-    width: 75%;
-    height: 100px;
-    padding-left: 5rem;
+    width: 70%;
+    height: 25%;
+    padding-left: 10%;
 }
 
 .img-size{
-    margin-top: 3rem;
-    margin-right: 5rem;
+    margin-top: 5%;
+    margin-right: 5%;
 }
 
 .box-size{
@@ -27,61 +27,63 @@
 }
 
 
-.description-1{
-    height: 80vh;
+.equity-description{
+    height: 25%;
     background-color: rgba(128,128,128,0.2) ;
 }
 
 .text-container{
-    width: 80%;
-    height: 400px;
-    margin-top: 3rem;
-    margin-right: 5rem;
+    width: 500px;
+    height: 25rem;
+    margin-top: 10%;
+    margin-right: 12.5%;
+    padding: 0 5%;
     box-shadow: -10px -20px 8px rgba(255,255,255,0.4), 10px 20px 10px grey; 
     border-radius: 10px;
 }
 
+
 .text-style{
     padding-top: 20px;
     text-align: center;
-    font-size: 48px;
-    font-family: 'Cedarville Cursive', cursive;
 }
 
 
 
-.title-space-1{
-    padding-top:5rem ;
-    padding-left: 8rem;
+.equity-title-space{
+    padding-top:10% ;
+    padding-left: 15%;
 }
 
 .box-space{
-    margin-left: 5rem;
+    margin-left: 10%;
 }
 
 .input-container{
-    width: 75%;
-    height: 2.5rem;
-    margin-left: 5rem;
-    background-color: rgba(128,128,128,0.4) ;
+    width: 80%;
+    height: 11%;
+    margin-left:10%;
+    padding-top: 0.7%;
+    padding-bottom: 0.3%;
 }
 
 .input-button-container{
-    margin-left:0.5rem;
+    margin-left:2.5%;
 }
 
 .input-size{
     border: 2px solid rgba(255,255,255,0.4);
-     margin:0.4rem;       
+     margin:0 2.5%;       
       background-color: rgba(128,128,128,0.1) ;
       border-radius: 20px;
 }
 
 
 .button-size{
+   width: 100px;
     border: 2px rgba(128,128,128,0.6);
-    margin:0.4rem;  
-    padding: 0px 20px;     
+    margin:0 2%;  
+    padding: 0px 1%;     
       background-color: rgba(128,128,128,0.3) ;
       border-radius: 20px;
       box-shadow: 3px 3px 5px rgba(128,128,128,0.6),-2px -2px 5px rgba(128,128,128,0.6); 
@@ -89,5 +91,18 @@
 
 }
 
+@media screen and (max-width:668px)
+{
+    .img-size{
+    margin-right: 0;
+    }
+
+    .text-container{
+    margin-right: 0%;
+}
+
+
+
+}
 
 
