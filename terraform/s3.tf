@@ -1,4 +1,9 @@
 # aws_s3_bucket for lambda function
+
+resource "aws_s3_bucket" "lambda" {
+  bucket = "${local.dns_hosted_zone_name}-lambda-functions"
+}
+
 # aws_s3 bucket for the www
 
 
