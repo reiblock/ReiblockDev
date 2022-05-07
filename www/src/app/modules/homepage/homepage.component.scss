@@ -1,0 +1,37 @@
+.home-container {
+  background-color: #f9f9f9;
+  .free-equity-container {
+    background-color: #eeeff1;
+    min-height: 350px;
+    padding-top: 4.375rem;
+    .container-v2 {
+      max-width: 1120px;
+      .container-v3 {
+        max-width: 24.1875rem;
+      }
+    }
+  }
+
+  .card {
+    min-width: 18.75rem;
+    min-height: 18.75rem;
+    background-color: #f9f9f9;
+  }
+
+  .get-offer-container {
+    background-color: #eeeff1 !important;
+    min-height: 470px;
+    padding-top: 4.375rem;
+    .container-v3 {
+      max-width: 1150px;
+    }
+  }
+  .how-it-works {
+    min-width: 400px;
+    min-height: 350px;
+  }
+  ::placeholder {
+    text-align: center;
+    color: #a7a7a7;
+  }
+}
