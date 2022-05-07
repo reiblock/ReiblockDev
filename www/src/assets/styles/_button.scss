@@ -1,0 +1,26 @@
+.btn {
+  display: inline-block;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-raised {
+  color: #fff;
+  background-color: #0053ef;
+  border: 1px solid transparent;
+  font-weight: bold;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}

@@ -1,0 +1,364 @@
+@import "./responsive";
+@import "./variables";
+
+.fnt-general {
+  font-family: $general-font-family !important;
+}
+
+.fnt-head {
+  font-family: $secondary-font-family !important;
+}
+
+.txt-clr53 {
+  color: #0053ef;
+}
+
+//////////////////// Font Color
+
+.bg-e00 {
+  background-color: $clre00;
+}
+
+.bg-3f8 {
+  background-color: #f2f3f8;
+}
+.text-clr75 {
+  color: #757575;
+}
+
+.text-clr666 {
+  color: #666666 !important;
+}
+
+.text-clrb46 {
+  color: #2c2b46;
+}
+
+.text-clrb1f {
+  color: #e02f1f;
+}
+
+.text-clr-e5a {
+  color: #ff1e5a;
+}
+
+.text-clr60b {
+  color: #80460b;
+}
+
+.text-clr4d {
+  color: #4d4d4d;
+}
+
+.text-clrab {
+  color: #ababab;
+}
+
+.text-clr000 {
+  color: #000000;
+}
+
+.text-clr5d {
+  color: #5d5d5d;
+}
+
+.text-clr55c {
+  color: #30855c;
+}
+
+.text-clr60b {
+  color: #80460b;
+}
+
+.text-clr334 {
+  color: #232334 !important;
+}
+
+.text-clr97 {
+  color: #979797;
+}
+
+.text-clr24 {
+  color: #242424;
+}
+
+.text-clr02 {
+  color: #020202;
+}
+
+.text-white {
+  color: #ffffff;
+}
+.text-clr50a {
+  color: #80450a;
+}
+
+.text-clr73c {
+  color: #27273c;
+}
+.text-clr474 {
+  color: $clr474;
+}
+.text-clrcb {
+  color: #cbcbcb;
+}
+
+.text-clr566 {
+  color: #0e1566;
+}
+.fnt-12 {
+  font-size: 12px;
+}
+
+.fnt-14 {
+  font-size: 14px;
+}
+
+.fnt-16 {
+  font-size: 16px;
+}
+
+.fnt-18 {
+  font-size: 18px;
+}
+
+.fnt-19 {
+  font-size: 19px;
+}
+
+.fnt-20 {
+  font-size: 20px;
+}
+
+.fnt-22 {
+  font-size: 22px;
+}
+
+.fnt-24 {
+  font-size: 24px;
+}
+
+.fnt-32 {
+  font-size: 32px;
+}
+
+.fnt-35 {
+  font-size: 35px;
+}
+
+.p-45 {
+  padding: 32px;
+}
+
+.py-25 {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.fw-b {
+  font-weight: bold;
+}
+
+.br-30 {
+  border-radius: 30px;
+}
+
+.bg-ee {
+  background-color: #0053ef;
+}
+
+.br-14 {
+  border-radius: 14px;
+}
+.fnt-30 {
+  font-size: 30px;
+}
+.br-10 {
+  border-radius: 10px;
+}
+
+.mb-68 {
+  margin-bottom: 68px;
+}
+
+.mt-9 {
+  margin-top: 90px;
+}
+
+.fnt-wgt-300 {
+  font-weight: 300;
+}
+
+.fnt-wgt-800 {
+  font-weight: 800;
+}
+
+.fnt-wgt-500 {
+  font-weight: 500;
+}
+.fnt-wgt-600 {
+  font-weight: 600;
+}
+@include tablet {
+  .fnt-md-14 {
+    font-size: 14px;
+  }
+
+  .fnt-md-16 {
+    font-size: 16px;
+  }
+
+  .fnt-md-18 {
+    font-size: 18px;
+  }
+
+  .fnt-md-20 {
+    font-size: 20px;
+  }
+
+  .fnt-md-22 {
+    font-size: 22px;
+  }
+
+  .fnt-md-24 {
+    font-size: 24px;
+  }
+
+  .fnt-md-26 {
+    font-size: 26px;
+  }
+
+  .fnt-md-30 {
+    font-size: 30px;
+  }
+
+  .fnt-md-36 {
+    font-size: 36px;
+  }
+
+  .fnt-md-56 {
+    font-size: 56px;
+  }
+
+  .p-md-45 {
+    padding: 32px;
+  }
+
+  .py-md-25 {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+  .mtt-md-3 {
+    margin-top: 30px;
+  }
+  .mtt-md-29 {
+    margin-top: 29px;
+  }
+}
+
+@include desktop {
+  .fnt-lg-14 {
+    font-size: 14px;
+  }
+
+  .fnt-lg-16 {
+    font-size: 16px;
+  }
+
+  .fnt-lg-18 {
+    font-size: 18px;
+  }
+
+  .fnt-lg-20 {
+    font-size: 20px;
+  }
+
+  .fnt-lg-22 {
+    font-size: 22px;
+  }
+
+  .fnt-lg-24 {
+    font-size: 24px;
+  }
+
+  .fnt-lg-26 {
+    font-size: 26px;
+  }
+
+  .fnt-lg-30 {
+    font-size: 30px;
+  }
+
+  .fnt-lg-36 {
+    font-size: 36px;
+  }
+
+  .fnt-lg-56 {
+    font-size: 56px;
+  }
+
+  .p-lg-45 {
+    padding: 32px;
+  }
+
+  .py-lg-25 {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
+
+@include desktop {
+  .fnt-sm-22 {
+    font-size: 22px;
+  }
+  .mtt-sm-13 {
+    margin-top: 13px;
+  }
+  .mtt-sm-18 {
+    margin-top: 18px;
+  }
+}
+@media (min-width: 1700px) {
+  .py-xxl-25 {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.mtt-3 {
+  margin-top: 30px;
+}
+
+.mtt-26 {
+  margin-top: 26px;
+}
+
+.mtt-29 {
+  margin-top: 29px;
+}
+
+.mtt-20 {
+  margin-top: 20px;
+}
+
+.mtt-64 {
+  margin-top: 64px;
+}
+
+@include mobile {
+  .mtt-xs-22 {
+    margin-top: 22px;
+  }
+}

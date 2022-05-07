@@ -1,11 +1,17 @@
-@import "./styles/responsive";
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "./assets/styles/common";
+@import "./assets/styles/variables";
+@import "./assets/styles/fonts";
+@import "./assets/styles/responsive";
+@import "./assets/styles/button";
 
-html,body{
-    height: 100%;
+html,
+body {
+  height: 100%;
+  background-color: #f9f9f9;
 }
 
 .text-style {
-    font-size: 48px;
-    font-family: 'Cedarville Cursive', cursive;
+  font-size: 48px;
+  font-family: "Cedarville Cursive", cursive;
 }

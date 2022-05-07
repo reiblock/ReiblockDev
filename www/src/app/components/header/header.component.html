@@ -2,10 +2,8 @@
   class="d-md-flex justify-content-md-center"
   [ngClass]="headerScroll ? 'scroll-menu-bar' : ''"
 >
-  <div
-    class="container menu-bar d-flex justify-content-between align-items-center px-3"
-  >
-    <div class="logo">
+  <div class="container menu-bar d-flex align-items-center px-3">
+    <div class="logo col-md-6">
       <a target="_blank" href="/"
         ><img src="/assets/images/american-eagle.jpg" alt="menu"
       /></a>
@@ -34,7 +32,7 @@
     >
       <span class="sidenav-mb__hide" (click)="sideNavOpened = false"></span>
       <div class="sidenav-mb__content" [class.open]="sideNavOpened">
-        <ul class="d-flex flex-wrap align-items-center">
+        <ul class="d-flex flex-wrap align-items-center text-color">
           <li>
             <a
               routerLinkActive="active"
@@ -43,16 +41,16 @@
               >Learn</a
             >
           </li>
-          <li>
+          <!-- <li>
             <a routerLinkActive="active" routerLink="/incest/">Invest</a>
-          </li>
+          </li> -->
           <li>
             <a routerLinkActive="active" routerLink="/faq/">FAQ</a>
           </li>
           <li>
             <a routerLinkActive="active" routerLink="/about-us/">About US</a>
           </li>
-          <li class="dropdown">
+          <!-- <li class="dropdown">
             <a
               class="d-none d-md-block"
               routerLinkActive="active"
@@ -76,10 +74,10 @@
                 <li><a routerLink="/services/outsourcing">Outsourcing</a></li>
               </ul>
             </div>
-          </li>
-          <li>
+          </li> -->
+          <!-- <li>
             <a [routerLink]="'/log-in/'">Login</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
