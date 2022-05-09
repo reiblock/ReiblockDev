@@ -1,6 +1,6 @@
 <div class="contact-container d-md-flex">
   <div class="contact-form col-md-8">
-    <div class="bg-ee mt-md-4 px-md-5 mb-md-5">
+    <div class="bg-ee mt-md-4 px-md-5 mb-md-5 mt-md-5 py-md-4">
       <h1 class="fnt-md-32 fnt-roboto fw-b text-white">
         Enter Information to See Your
       </h1>
@@ -19,8 +19,21 @@
               type="text"
               id="firstName"
               placeholder="First Name"
+              [formControl]="contactForm.controls['firstName']"
               class="input form-control br-10"
             />
+            <div
+              *ngIf="
+                contactForm.get('firstName')?.invalid &&
+                contactForm.get('firstName')?.touched
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="contactForm.get('firstName')?.errors?.required"
+                >First Name is Required</small
+              >
+            </div>
           </div>
           <div class="col-md-6">
             <label for="lastName" class="form-label fnt-lg-20 fnt-roboto"
@@ -30,8 +43,21 @@
               type="text"
               id="lastName"
               placeholder="Last Name"
+              [formControl]="contactForm.controls['lastName']"
               class="input form-control br-10"
             />
+            <div
+              *ngIf="
+                contactForm.get('lastName')?.invalid &&
+                contactForm.get('lastName')?.touched
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="contactForm.get('lastName')?.errors?.required"
+                >Last Name is Required</small
+              >
+            </div>
           </div>
         </div>
         <div class="row col-md-12 mb-md-5">
@@ -43,8 +69,28 @@
               type="email"
               id="email"
               placeholder="Email"
+              [formControl]="contactForm.controls['email']"
               class="input form-control br-10"
             />
+            <div
+              *ngIf="
+                contactForm.get('email')?.invalid &&
+                contactForm.get('email')?.touched
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="contactForm.get('email').errors?.required"
+              >
+                Email is required.</small
+              >
+              <small
+                class="text-danger"
+                *ngIf="contactForm.get('email').errors?.email"
+              >
+                Email is Invalid.</small
+              >
+            </div>
           </div>
           <div class="col-md-6">
             <label for="phone" class="form-label fnt-lg-20 fnt-roboto"
@@ -54,8 +100,21 @@
               type="number"
               id="phone"
               placeholder="Phone"
+              [formControl]="contactForm.controls['phone']"
               class="input form-control br-10"
             />
+            <div
+              *ngIf="
+                contactForm.get('phone')?.invalid &&
+                contactForm.get('phone')?.touched
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="contactForm.get('phone')?.errors?.required"
+                >Phone no. is Required</small
+              >
+            </div>
           </div>
         </div>
         <div class="row col-md-12 mb-md-5">
@@ -67,26 +126,87 @@
               type="text"
               id="streetAddress"
               placeholder="Street Address"
+              [formControl]="contactForm.controls['address']"
               class="input form-control br-10"
             />
+            <div
+              *ngIf="
+                contactForm.get('address')?.invalid &&
+                contactForm.get('address')?.touched
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="contactForm.get('address')?.errors?.required"
+                >Street Address is Required</small
+              >
+            </div>
           </div>
           <div class="col-md-6">
             <label for="zipCode" class="form-label fnt-lg-20 fnt-roboto"
               >Zip Code</label
             >
             <input
-              type="text"
+              type="number"
               id="zipCode"
               placeholder="Apt/Suite"
+              [formControl]="contactForm.controls['zipCode']"
               class="input form-control br-10"
             />
+            <div
+              *ngIf="
+                contactForm.get('zipCode')?.invalid &&
+                contactForm.get('zipCode')?.touched
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="contactForm.get('zipCode')?.errors?.required"
+                >Street Address is Required</small
+              >
+            </div>
           </div>
         </div>
-        <div class="d-md-flex justify-content-md-center">
-          <button class="btn btn-raised">See Offer</button>
+        <div class="d-md-flex justify-content-md-center mb-md-5">
+          <button
+            class="btn btn-raised col-md-2"
+            [disabled]="contactForm.invalid"
+            [routerLink]="['/offers']"
+          >
+            See Offer
+          </button>
         </div>
       </form>
     </div>
   </div>
-  <div class="expect-container"></div>
+  <div
+    class="expect-container d-md-flex col-md-4 flex-column align-items-md-center mt-md-5"
+  >
+    <div
+      class="bs-c what-to-expect br-14 d-md-flex flex-md-column align-items-md-center"
+    >
+      <h2 class="fnt-lg-32 fnt-roboto txt-clr53 mb-md-4 mt-md-4">
+        What to Expect
+      </h2>
+      <h2 class="fnt-lg-26 fnt-roboto mb-md-4 align-self-md-start ps-md-5">
+        Fill out Form
+      </h2>
+      <h2 class="fnt-lg-26 fnt-roboto mb-md-4 text-left">
+        Submit to Reveal Your <br />Equity Potential
+      </h2>
+      <h2 class="fnt-lg-26 fnt-roboto center text-left">
+        Accept a Cash offer or <br />
+        Register Equity Token
+      </h2>
+    </div>
+    <div class="col-md-2 d-md-flex justify-content-md-center mt-md-5">
+      <img
+        src="../../../assets/images/home.jpg"
+        alt="image"
+        class="rounded"
+        width="400px"
+        height="230px"
+      />
+    </div>
+  </div>
 </div>

@@ -18,6 +18,9 @@
   background-color: #0053ef;
   border: 1px solid transparent;
   font-weight: bold;
+  &:hover {
+    color: white;
+  }
 
   &:focus {
     box-shadow: none;
