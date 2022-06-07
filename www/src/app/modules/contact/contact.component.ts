@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TestService } from 'src/app/services/test.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,8 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   public contactForm!: FormGroup;
+  zip: any;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private testService: TestService) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
@@ -20,5 +22,8 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {  
+    this.zip = this.testService.getZipCode()
+    this.contactForm.get('zipCode')?.setValue(this.zip)
+  }
 }

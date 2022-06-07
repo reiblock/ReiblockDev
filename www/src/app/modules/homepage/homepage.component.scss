@@ -13,9 +13,10 @@
   }
 
   .card {
-    min-width: 18.75rem;
-    min-height: 18.75rem;
+    max-width: 18.75rem;
+    max-height: 18.75rem;
     background-color: #f9f9f9;
+   
   }
 
   .get-offer-container {

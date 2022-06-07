@@ -149,7 +149,7 @@
             <input
               type="number"
               id="zipCode"
-              placeholder="Apt/Suite"
+              placeholder="Zip Code"
               [formControl]="contactForm.controls['zipCode']"
               class="input form-control br-10"
             />
@@ -162,7 +162,7 @@
               <small
                 class="text-danger"
                 *ngIf="contactForm.get('zipCode')?.errors?.required"
-                >Street Address is Required</small
+                >Zip Code is Required</small
               >
             </div>
           </div>
@@ -201,7 +201,7 @@
     </div>
     <div class="col-md-2 d-md-flex justify-content-md-center mt-md-5">
       <img
-        src="../../../assets/images/home.jpg"
+        src="../../../assets/images/a-person-holding-a-miniature-house-and-some-dollar.jpeg"
         alt="image"
         class="rounded"
         width="400px"

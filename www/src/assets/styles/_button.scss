@@ -14,10 +14,11 @@
 }
 
 .btn-raised {
-  color: #fff;
   background-color: #0053ef;
   border: 1px solid transparent;
   font-weight: bold;
+  color: #fff;
+  box-shadow: 2px 2px 5px #babecc, -5px -5px 10px #ffffff73;
   &:hover {
     color: white;
   }

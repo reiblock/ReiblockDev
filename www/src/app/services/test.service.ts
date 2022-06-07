@@ -5,9 +5,14 @@ import { of } from 'rxjs';
   providedIn: 'root',
 })
 export class TestService {
+  serviceEmail:any;
   constructor() {}
 
-  getHelloWorld() {
-    return of('Hello world!');
-  }
+ setZipCode(email:any){
+  this.serviceEmail = email
+ }
+
+ getZipCode(){
+  return this.serviceEmail
+ }
 }

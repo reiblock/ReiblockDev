@@ -20,12 +20,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getHelloWorld() {
-    this.testService.getHelloWorld().subscribe((res) => {
-      console.log(res);
-      this.text = res;
-    });
-  }
+  // getHelloWorld() {
+  //   this.testService.getHelloWorld().subscribe((res) => {
+  //     console.log(res);
+  //     this.text = res;
+  //   });
+  // }
 
   onLogin(data: any)
   {

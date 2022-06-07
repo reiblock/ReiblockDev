@@ -9,43 +9,44 @@
           </p>
           <div class="d-md-flex col-md-12">
             <input
-              type="email"
-              placeholder="enter address"
+              type="zipCode"
+              placeholder="Enter Zip"
               class="form-control me-md-2 br-10 input nt-wgt-300"
-              [formControl]="emailForm.controls['email']"
+              [formControl]="zipForm.controls['zipCode']"
             />
 
             <button
               class="col-md-4 br-10 btn btn-raised"
-              [disabled]="emailForm.invalid"
+              [disabled]="zipForm.invalid"
               [routerLink]="['/contact']"
+              (click)="onSubmit()"
             >
               Get Offer
             </button>
           </div>
           <div
             *ngIf="
-              emailForm.get('email')?.invalid && emailForm.get('email')?.touched
+              zipForm.get('zipCode')?.invalid && zipForm.get('zipCode')?.touched
             "
           >
             <small
               class="text-danger"
-              *ngIf="emailForm.get('email').errors?.required"
+              *ngIf="zipForm.get('zipCode').errors?.required"
             >
-              Email is required.</small
+              Zip Code is required.</small
             >
             <small
               class="text-danger"
-              *ngIf="emailForm.get('email').errors?.email"
+              *ngIf="zipForm.get('zipCode').errors?.minLength"
             >
-              Email is Invalid.</small
+              Zip Code should alteast 5 numbers.</small
             >
           </div>
         </div>
         <div class="">
           <img
             class="mb-md-5"
-            src="../../../assets/images/home.jpg"
+            src="../../../assets/images/couple-with-new-home-1B.jpeg"
             width="500px"
             height="300px"
             alt=""
@@ -63,9 +64,15 @@
       money however you want.
     </p>
     <div class="d-md-flex mt-md-4 mb-md-5">
-      <div class="card br-14 border-0 me-md-5 bs-c"></div>
-      <div class="card br-14 border-0 me-md-5 bs-c"></div>
-      <div class="card br-14 border-0 bs-c"></div>
+      <div class="card br-14 border-0 me-md-5 bs-c">
+        <img src="../../../assets/images/graduation-cap-1c.jpeg" alt="graduation-cap-" class="br-14">
+      </div>
+      <div class="card br-14 border-0 me-md-5 bs-c">
+        <img src="../../../assets/images/nice-pictures-of-their-family-on-vacation-1D_Compress.jpeg" alt="family-vacation" class="br-14">
+      </div>
+      <div class="card br-14 border-0 bs-c">
+        <img src="../../../assets/images/large-car-suv_1E.jpeg" alt="suv" class="br-14">
+      </div>
     </div>
   </div>
   <div class="get-offer-container mt-md-5">
@@ -81,34 +88,35 @@
           <div class="d-md-flex col-md-12">
             <input
               type="text"
-              placeholder="enter address"
-              [formControl]="emailForm.controls['email']"
+              placeholder="Enter Zip"
+              [formControl]="zipForm.controls['zipCode']"
               class="form-control me-md-2 br-10 input nt-wgt-300"
             />
             <button
               class="col-md-4 br-10 btn btn-raised"
-              [disabled]="emailForm.invalid"
+              [disabled]="zipForm.invalid"
               [routerLink]="['/contact']"
+              (click)="onSubmit()"
             >
               Get Offer
             </button>
           </div>
           <div
             *ngIf="
-              emailForm.get('email')?.invalid && emailForm.get('email')?.touched
+              zipForm.get('zipCode')?.invalid && zipForm.get('zipCode')?.touched
             "
           >
             <small
               class="text-danger"
-              *ngIf="emailForm.get('email').errors?.required"
+              *ngIf="zipForm.get('zipCode').errors?.required"
             >
-              Email is required.</small
+              Zip Code is required.</small
             >
             <small
               class="text-danger"
-              *ngIf="emailForm.get('email').errors?.email"
+              *ngIf="zipForm.get('zipCode').errors?.minLength"
             >
-              Email is Invalid.</small
+              Zip Code should alteast 5 numbers.</small
             >
           </div>
         </div>
