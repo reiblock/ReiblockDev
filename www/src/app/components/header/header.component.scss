@@ -19,9 +19,9 @@ nav {
 }
 
 nav {
-  position: absolute;
+  // position: absolute;
   display: flex;
-  height: 80px;
+  // height: 80px;
   width: 100%;
   background: #ffffff;
   align-items: center;
@@ -42,7 +42,7 @@ nav {
       img {
         height: 35px;
         @include desktop {
-          height: 55px;
+          height: 35px;
         }
       }
     }

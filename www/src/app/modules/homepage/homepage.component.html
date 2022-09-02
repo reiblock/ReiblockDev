@@ -1,61 +1,43 @@
 <div class="home-container">
-  <div class="free-equity-container">
-    <div class="container container-v2">
+  <div class="free-equity-container mt-5 mt-lg-0">
+    <div class="container container-v2 p-0">
       <div class="d-md-flex justify-content-md-between">
-        <div class="container-v3">
-          <h2 class="fnt-lg-32 fnt-roboto txt-clr53">Free Equity Now</h2>
-          <p class="fnt-roboto fnt-lg-24">
+        <div
+          class="container-v3 mob-con-1 d-flex flex-column justify-content-center pt-md-0 ps-md-0 ms-md-5 ms-lg-0 pt-5 ps-3">
+          <h2 class="fnt-lg-32 fnt-32 fnt-roboto txt-clr53 fw-b">Free Equity Now</h2>
+          <p class="fnt-roboto fnt-lg-24 fw-b">
             See how much equity you qualify for
           </p>
-          <div class="d-md-flex col-md-12">
-            <input
-              type="zipCode"
-              placeholder="Enter Zip"
-              class="form-control me-md-2 br-10 input nt-wgt-300"
-              [formControl]="zipForm.controls['zipCode']"
-            />
+          <div class="d-md-flex col-md-12 col-6">
+            <input type="zipCode" placeholder="Enter Zip"
+              class="form-control me-md-2 mb-md-0 mb-3 br-10 input nt-wgt-300"
+              [formControl]="zipForm.controls['zipCode']" />
 
-            <button
-              class="col-md-4 br-10 btn btn-raised"
-              [disabled]="zipForm.invalid"
-              [routerLink]="['/contact']"
-              (click)="onSubmit()"
-            >
+            <button class="col-md-4 col-8 br-10 btn btn-raised" [disabled]="zipForm.invalid" [routerLink]="['/contact']"
+              (click)="onSubmit()">
               Get Offer
             </button>
           </div>
-          <div
-            *ngIf="
+          <div *ngIf="
               zipForm.get('zipCode')?.invalid && zipForm.get('zipCode')?.touched
-            "
-          >
-            <small
-              class="text-danger"
-              *ngIf="zipForm.get('zipCode').errors?.required"
-            >
-              Zip Code is required.</small
-            >
-            <small
-              class="text-danger"
-              *ngIf="zipForm.get('zipCode').errors?.minLength"
-            >
-              Zip Code should alteast 5 numbers.</small
-            >
+            ">
+            <small class="text-danger" *ngIf="zipForm.get('zipCode').errors?.required">
+              Zip Code is required.</small>
+            <small class="text-danger" *ngIf="zipForm.get('zipCode').errors?.minLength">
+              Zip Code should alteast 5 numbers.</small>
           </div>
         </div>
         <div class="">
-          <img
-            class="mb-md-5"
-            src="../../../assets/images/couple-with-new-home-1B.jpeg"
-            width="500px"
-            height="300px"
-            alt=""
-          />
+          <img class="img-fluid b-img" src="../../../assets/images/couple-with-new-home-1B.jpeg" width="500px"
+            height="350px" alt="" />
         </div>
       </div>
     </div>
   </div>
-  <div class="d-md-flex flex-column align-items-md-center mt-md-5">
+
+
+
+  <div class="d-flex flex-column align-items-center mt-md-5 mt-4">
     <h2 class="fnt-lg-32 fnt-roboto txt-clr53">The Cornerstone of Equity</h2>
     <p class="fnt-roboto fnt-lg-24 col-md-6 text-center">
       REI Block is the perfect solution for homeowners who want to get money out
@@ -64,73 +46,54 @@
       money however you want.
     </p>
     <div class="d-md-flex mt-md-4 mb-md-5">
-      <div class="card br-14 border-0 me-md-5 bs-c">
-        <img src="../../../assets/images/graduation-cap-1c.jpeg" alt="graduation-cap-" class="br-14">
+      <div class="card br-14 border-0 me-md-5 bs-c mb-4">
+        <img src="../../../assets/images/graduation-cap-1c.jpeg" alt="graduation-cap-" class="br-14 py-4 m-img">
       </div>
-      <div class="card br-14 border-0 me-md-5 bs-c">
-        <img src="../../../assets/images/nice-pictures-of-their-family-on-vacation-1D_Compress.jpeg" alt="family-vacation" class="br-14">
+      <div class="card br-14 border-0 me-md-5 bs-c mb-4">
+        <img src="../../../assets/images/nice-pictures-of-their-family-on-vacation-1D_Compress.jpeg"
+          alt="family-vacation" class="br-14 py-4 m-img">
       </div>
-      <div class="card br-14 border-0 bs-c">
-        <img src="../../../assets/images/large-car-suv_1E.jpeg" alt="suv" class="br-14">
+      <div class="card br-14 border-0 bs-c mb-4">
+        <img src="../../../assets/images/large-car-suv_1E.jpeg" alt="suv" class="br-14 py-4 m-img">
       </div>
     </div>
   </div>
   <div class="get-offer-container mt-md-5">
-    <div class="container container-v3">
-      <div class="d-md-flex justify-content-md-between">
-        <div class="mt-md-5">
+    <div class="container container-v3 p-0">
+      <div class="d-md-flex justify-content-md-between pb-md-0 pb-4 ps-lg-0 ps-md-5 pe-lg-0 pe-md-5">
+        <div class="mt-md-5 d-md-block d-flex flex-column align-items-center mb-5">
           <h2 class="fnt-lg-32 fnt-roboto txt-clr53 mb-md-3">Get an Offer</h2>
-          <p class="fnt-roboto fnt-lg-24 lh-n mb-md-4">
+          <p class="fnt-roboto fnt-lg-24 lh-n mb-md-4 text-center text-md-start">
             Access home equity on your terms. <br />
             Find out how much cash you can <br />
             potentially unlock now.
           </p>
           <div class="d-md-flex col-md-12">
-            <input
-              type="text"
-              placeholder="Enter Zip"
-              [formControl]="zipForm.controls['zipCode']"
-              class="form-control me-md-2 br-10 input nt-wgt-300"
-            />
-            <button
-              class="col-md-4 br-10 btn btn-raised"
-              [disabled]="zipForm.invalid"
-              [routerLink]="['/contact']"
-              (click)="onSubmit()"
-            >
+            <input type="text" placeholder="Enter Zip" [formControl]="zipForm.controls['zipCode']"
+              class="form-control me-md-2 mb-3 mb-md-0 br-10 input nt-wgt-300" />
+            <button class="col-md-4 col-9 ms-4 ms-md-0 br-10 btn btn-raised" [disabled]="zipForm.invalid"
+              [routerLink]="['/contact']" (click)="onSubmit()">
               Get Offer
             </button>
           </div>
-          <div
-            *ngIf="
+          <div *ngIf="
               zipForm.get('zipCode')?.invalid && zipForm.get('zipCode')?.touched
-            "
-          >
-            <small
-              class="text-danger"
-              *ngIf="zipForm.get('zipCode').errors?.required"
-            >
-              Zip Code is required.</small
-            >
-            <small
-              class="text-danger"
-              *ngIf="zipForm.get('zipCode').errors?.minLength"
-            >
-              Zip Code should alteast 5 numbers.</small
-            >
+            ">
+            <small class="text-danger" *ngIf="zipForm.get('zipCode').errors?.required">
+              Zip Code is required.</small>
+            <small class="text-danger" *ngIf="zipForm.get('zipCode').errors?.minLength">
+              Zip Code should alteast 5 numbers.</small>
           </div>
         </div>
-        <div
-          class="bs-c how-it-works br-14 d-md-flex flex-md-column align-items-md-center"
-        >
-          <h2 class="fnt-lg-32 fnt-roboto txt-clr53 mb-md-4 mt-md-4">
+        <div class="bs-c mx-md-0 mx-5 px-md-5 py-md-4 py-4 br-14 d-flex flex-column align-items-center">
+          <h2 class="fnt-lg-32 fnt-roboto txt-clr53 mb-4 mt-md-4">
             How it Works
           </h2>
-          <h2 class="fnt-lg-26 fnt-roboto mb-md-4">Submit Basic Information</h2>
-          <h2 class="fnt-lg-26 fnt-roboto mb-md-4">
+          <h2 class="fnt-lg-26 fnt-14 fnt-roboto mb-4">Submit Basic Information</h2>
+          <h2 class="fnt-lg-26 fnt-14 fnt-roboto mb-4">
             See your Potential Equity <br />Unlock or Total Cash Offer
           </h2>
-          <h2 class="fnt-lg-26 fnt-roboto">
+          <h2 class="fnt-lg-26 fnt-14 fnt-roboto">
             Accept a Cash offer or <br />
             Register Equity Token
           </h2>

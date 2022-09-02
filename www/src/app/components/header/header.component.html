@@ -1,45 +1,20 @@
-<nav
-  class="d-md-flex justify-content-md-center"
-  [ngClass]="headerScroll ? 'scroll-menu-bar' : ''"
->
-  <div class="container menu-bar d-flex align-items-center px-3">
+<nav class="d-md-flex justify-content-md-center" [ngClass]="headerScroll ? 'scroll-menu-bar' : ''">
+  <div class="container menu-bar d-flex justify-content-between px-3 px-md-0">
     <div class="logo col-md-6">
-      <a  href="/"
-        ><img src="/assets/images/REIblock_logo.png" alt="menu"
-      /></a>
+      <a href="/"><img src="/assets/images/REIblock_logo.png" alt="menu" /></a>
     </div>
-    <a class="sidenav-hamberg d-md-none">
-      <img
-        *ngIf="!sideNavOpened"
-        (click)="sideNavOpened = true"
-        src="assets/images/icons/menu.png"
-        alt="hamberg"
-        height="24"
-        width="24"
-      />
-      <img
-        *ngIf="sideNavOpened"
-        (click)="sideNavOpened = false"
-        src="assets/images/icons/close-icon.png"
-        alt="hamberg"
-        height="16"
-        width="16"
-      />
+    <a class="sidenav-hamberg d-lg-none d-flex align-items-center">
+      <img *ngIf="!sideNavOpened" (click)="sideNavOpened = true" src="assets/images/icons/menu.png" alt="hamberg"
+        height="24" width="24" />
+      <img *ngIf="sideNavOpened" (click)="sideNavOpened = false" src="assets/images/icons/close-icon.png" alt="hamberg"
+        height="16" width="16" />
     </a>
-    <div
-      class="sidenav-mb d-md-flex align-items-md-center"
-      [class.open]="sideNavOpened"
-    >
+    <div class="sidenav-mb d-md-flex align-items-md-center" [class.open]="sideNavOpened">
       <span class="sidenav-mb__hide" (click)="sideNavOpened = false"></span>
       <div class="sidenav-mb__content" [class.open]="sideNavOpened">
         <ul class="d-flex flex-wrap align-items-center text-color">
           <li>
-            <a
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              routerLink="/"
-              >Learn</a
-            >
+            <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Learn</a>
           </li>
           <!-- <li>
             <a routerLinkActive="active" routerLink="/incest/">Invest</a>
@@ -48,13 +23,13 @@
             <a routerLinkActive="active" routerLink="/faq/">FAQ</a>
           </li>
           <li>
-            <a routerLinkActive="active" routerLink="/about-us/">About US</a>
+            <a routerLinkActive="active" routerLink="/about-us/">About Us</a>
           </li>
           <li *ngIf="this.domain !== '/'">
             <button class="btn btn-raised py-2 px-3 mx-3">Login</button>
           </li>
           <li *ngIf="this.domain !== '/'">
-            <button class="btn btn-raised py-2 px-3">Sign up</button>
+            <button class="btn btn-raised py-2 px-3 mx-3">Sign up</button>
           </li>
           <!-- <li class="dropdown">
             <a

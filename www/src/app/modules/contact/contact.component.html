@@ -1,212 +1,163 @@
-<div class="contact-container d-md-flex">
+<div class="contact-container mt-9 mt-md-0 d-md-flex">
   <div class="contact-form col-md-8">
-    <div class="bg-ee mt-md-4 px-md-5 mb-md-5 mt-md-5 py-md-4">
-      <h1 class="fnt-md-32 fnt-roboto fw-b text-white">
+    <div class="bg-ee mt-md-4 px-md-5 mb-md-5 mt-md-5 py-md-4 mb-3 p-3">
+      <h1 class="fnt-lg-36 fnt-22 fnt-roboto fw-b text-white">
         Enter Information to See Your
       </h1>
-      <h1 class="fnt-md-32 fnt-roboto fw-b text-white">
+      <h1 class="fnt-lg-36 fnt-22 fnt-roboto fw-b text-white">
         Potential Equity Payout!
       </h1>
     </div>
     <div>
-      <form action="" class="form-group ms-md-5">
-        <div class="row col-md-12 mb-md-5">
-          <div class="col-md-6">
-            <label for="firstName" class="form-label fnt-lg-20 fnt-roboto"
-              >First Name</label
-            >
-            <input
-              type="text"
-              id="firstName"
-              placeholder="First Name"
-              [formControl]="contactForm.controls['firstName']"
-              class="input form-control br-10"
-            />
-            <div
-              *ngIf="
+      <form [formGroup]="contactForm" class="form-group ms-md-5 mx-3">
+        <div class="row col-md-12 mb-md-2">
+          <div class="col-md-6 mt-2 mt-md-0">
+            <label for="firstName" class="form-label fnt-lg-20 fnt-roboto">First Name</label>
+            <input type="text" id="firstName" placeholder="First Name" [formControl]="contactForm.controls['firstName']"
+              class="input form-control br-10" />
+            <div *ngIf="
                 contactForm.get('firstName')?.invalid &&
                 contactForm.get('firstName')?.touched
-              "
-            >
-              <small
-                class="text-danger"
-                *ngIf="contactForm.get('firstName')?.errors?.required"
-                >First Name is Required</small
-              >
+              ">
+              <small class="text-danger" *ngIf="contactForm.get('firstName')?.errors?.required">First Name is
+                Required</small>
             </div>
           </div>
-          <div class="col-md-6">
-            <label for="lastName" class="form-label fnt-lg-20 fnt-roboto"
-              >Last Name</label
-            >
-            <input
-              type="text"
-              id="lastName"
-              placeholder="Last Name"
-              [formControl]="contactForm.controls['lastName']"
-              class="input form-control br-10"
-            />
-            <div
-              *ngIf="
+          <div class="col-md-6 mt-2 mt-md-0">
+            <label for="lastName" class="form-label fnt-lg-20 fnt-roboto">Last Name</label>
+            <input type="text" id="lastName" placeholder="Last Name" [formControl]="contactForm.controls['lastName']"
+              class="input form-control br-10" />
+            <div *ngIf="
                 contactForm.get('lastName')?.invalid &&
                 contactForm.get('lastName')?.touched
-              "
-            >
-              <small
-                class="text-danger"
-                *ngIf="contactForm.get('lastName')?.errors?.required"
-                >Last Name is Required</small
-              >
+              ">
+              <small class="text-danger" *ngIf="contactForm.get('lastName')?.errors?.required">Last Name is
+                Required</small>
             </div>
           </div>
         </div>
-        <div class="row col-md-12 mb-md-5">
-          <div class="col-md-6">
-            <label for="email" class="form-label fnt-lg-20 fnt-roboto"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-              [formControl]="contactForm.controls['email']"
-              class="input form-control br-10"
-            />
-            <div
-              *ngIf="
+        <div class="row col-md-12 mb-md-2">
+          <div class="col-md-6 mt-2 mt-md-0">
+            <label for="email" class="form-label fnt-lg-20 fnt-roboto">Email</label>
+            <input type="email" id="email" placeholder="Email" [formControl]="contactForm.controls['email']"
+              class="input form-control br-10" />
+            <div *ngIf="
                 contactForm.get('email')?.invalid &&
                 contactForm.get('email')?.touched
-              "
-            >
-              <small
-                class="text-danger"
-                *ngIf="contactForm.get('email').errors?.required"
-              >
-                Email is required.</small
-              >
-              <small
-                class="text-danger"
-                *ngIf="contactForm.get('email').errors?.email"
-              >
-                Email is Invalid.</small
-              >
+              ">
+              <small class="text-danger" *ngIf="contactForm.get('email').errors?.required">
+                Email is required.</small>
+              <small class="text-danger" *ngIf="contactForm.get('email').errors?.email">
+                Email is Invalid.</small>
             </div>
           </div>
-          <div class="col-md-6">
-            <label for="phone" class="form-label fnt-lg-20 fnt-roboto"
-              >Phone</label
-            >
-            <input
-              type="number"
-              id="phone"
-              placeholder="Phone"
-              [formControl]="contactForm.controls['phone']"
-              class="input form-control br-10"
-            />
-            <div
-              *ngIf="
+          <div class="col-md-6 mt-2 mt-md-0">
+            <label for="phone" class="form-label fnt-lg-20 fnt-roboto">Phone</label>
+            <input type="text" id="phone" placeholder="Phone" [formControl]="contactForm.controls['phone']"
+              class="input form-control br-10" />
+            <div *ngIf="
                 contactForm.get('phone')?.invalid &&
                 contactForm.get('phone')?.touched
-              "
-            >
-              <small
-                class="text-danger"
-                *ngIf="contactForm.get('phone')?.errors?.required"
-                >Phone no. is Required</small
-              >
+              ">
+              <small class="text-danger" *ngIf="contactForm.get('phone')?.errors?.required">Phone no. is
+                Required</small>
             </div>
           </div>
         </div>
-        <div class="row col-md-12 mb-md-5">
-          <div class="col-md-6">
-            <label for="streetAddress" class="form-label fnt-lg-20 fnt-roboto"
-              >Street Address</label
-            >
-            <input
-              type="text"
-              id="streetAddress"
-              placeholder="Street Address"
-              [formControl]="contactForm.controls['address']"
-              class="input form-control br-10"
-            />
-            <div
-              *ngIf="
+        <div class="row col-md-12 mb-md-2 mb-3">
+          <div class="col-md-6 mt-2 mt-md-0">
+            <label for="streetAddress" class="form-label fnt-lg-20 fnt-roboto">Street Address</label>
+            <input type="text" id="streetAddress" placeholder="Street Address"
+              [formControl]="contactForm.controls['address']" class="input form-control br-10"
+              ngx-google-places-autocomplete (onAddressChange)="handleAddressChange($event)" [options]="options"
+              #placesRef="ngx-places" />
+            <div *ngIf="
                 contactForm.get('address')?.invalid &&
                 contactForm.get('address')?.touched
-              "
-            >
-              <small
-                class="text-danger"
-                *ngIf="contactForm.get('address')?.errors?.required"
-                >Street Address is Required</small
-              >
+              ">
+              <small class="text-danger" *ngIf="contactForm.get('address')?.errors?.required">Street Address is
+                Required</small>
             </div>
           </div>
-          <div class="col-md-6">
-            <label for="zipCode" class="form-label fnt-lg-20 fnt-roboto"
-              >Zip Code</label
-            >
-            <input
-              type="number"
-              id="zipCode"
-              placeholder="Zip Code"
-              [formControl]="contactForm.controls['zipCode']"
-              class="input form-control br-10"
-            />
-            <div
-              *ngIf="
+          <div class="col-md-6 mt-2 mt-md-0">
+            <label for="zipCode" class="form-label fnt-lg-20 fnt-roboto">Zip Code</label>
+            <input type="text" id="zipCode" placeholder="Zip Code" [formControl]="contactForm.controls['zipCode']"
+              class="input form-control br-10" />
+            <div *ngIf="
                 contactForm.get('zipCode')?.invalid &&
                 contactForm.get('zipCode')?.touched
-              "
-            >
-              <small
-                class="text-danger"
-                *ngIf="contactForm.get('zipCode')?.errors?.required"
-                >Zip Code is Required</small
-              >
+              ">
+              <small class="text-danger" *ngIf="contactForm.get('zipCode')?.errors?.required">Zip Code is
+                Required</small>
             </div>
           </div>
         </div>
-        <div class="d-md-flex justify-content-md-center mb-md-5">
-          <button
-            class="btn btn-raised col-md-2"
-            [disabled]="contactForm.invalid"
-            [routerLink]="['/offers']"
-          >
-            See Offer
-          </button>
+        <div class="row col-md-12 mb-md-2">
+          <div class="col-lg-10">
+            <h2 class="mb-md-2 mt-md-3 fnt-lg-30 fnt-20">What are you interested in today?</h2>
+            <button
+              class="btn btn-raised d-md-flex justify-content-md-center col-12 col-md-10 mb-md-3 mt-md-3 mt-2 mb-3 py-3 fnt-lg-26 fw-b"
+              [disabled]="contactForm.invalid" [routerLink]="['/offers']" #button1
+              title="I’m interested in selling my house" (click)="onSubject(button1.title)">
+              I’m interested in selling my house
+            </button>
+            <button
+              class="btn btn-raised d-md-flex justify-content-md-center col-12 col-md-10 mb-md-3 mb-3 py-3 fnt-lg-26 fw-b"
+              [disabled]="contactForm.invalid" [routerLink]="['/offers']" #button2
+              title="I want to unlock some of my Equity" (click)="onSubject(button2.title)">
+              I want to unlock some of my Equity
+            </button>
+            <button
+              class="btn btn-raised d-md-flex justify-content-md-center col-12 col-md-10 mb-md-3 mb-3 py-3 fnt-lg-26 fw-b"
+              [disabled]="contactForm.invalid" [routerLink]="['/offers']" #button3
+              title="Just curious about my home Equity Value" (click)="onSubject(button3.title)">
+              Just curious about my home Equity Value
+            </button>
+          </div>
         </div>
       </form>
     </div>
   </div>
-  <div
-    class="expect-container d-md-flex col-md-4 flex-column align-items-md-center mt-md-5"
-  >
-    <div
-      class="bs-c what-to-expect br-14 d-md-flex flex-md-column align-items-md-center"
-    >
-      <h2 class="fnt-lg-32 fnt-roboto txt-clr53 mb-md-4 mt-md-4">
-        What to Expect
-      </h2>
-      <h2 class="fnt-lg-26 fnt-roboto mb-md-4 align-self-md-start ps-md-5">
-        Fill out Form
-      </h2>
-      <h2 class="fnt-lg-26 fnt-roboto mb-md-4 text-left">
-        Submit to Reveal Your <br />Equity Potential
-      </h2>
-      <h2 class="fnt-lg-26 fnt-roboto center text-left">
-        Accept a Cash offer or <br />
-        Register Equity Token
-      </h2>
+  <div class="expect-container d-md-flex col-md-4 flex-column align-items-md-center mt-md-5">
+    <div class="bs-c px-md-5 pb-md-5 br-14 d-md-flex flex-md-column align-items-md-center d-sm-hide">
+      <div>
+        <h2 class="fnt-lg-32 fnt-roboto txt-clr53 mb-md-4 mt-md-4">
+          What to Expect
+        </h2>
+        <h2 class="fnt-lg-26 fnt-roboto mb-md-4">
+          Fill out Form
+        </h2>
+        <h2 class="fnt-lg-26 fnt-roboto mb-md-4 text-left">
+          Submit to Reveal Your <br />Equity Potential
+        </h2>
+        <h2 class="fnt-lg-26 fnt-roboto center text-left">
+          Accept a Cash offer or <br />
+          Register Equity Token
+        </h2>
+      </div>
     </div>
-    <div class="col-md-2 d-md-flex justify-content-md-center mt-md-5">
-      <img
-        src="../../../assets/images/a-person-holding-a-miniature-house-and-some-dollar.jpeg"
-        alt="image"
-        class="rounded"
-        width="400px"
-        height="230px"
-      />
+    <div class="d-md-none p-5">
+      <div class="d-flex flex-column align-items-center p-4 bs-c br-14">
+        <h2 class="fnt-32 fnt-roboto txt-clr53 mb-4 mb-md-4 mt-md-4">
+          What to Expect
+        </h2>
+        <h2 class="fnt-20 fnt-roboto mb-md-4 mb-3">
+          Fill out Form
+        </h2>
+        <h2 class="fnt-20 fnt-roboto mb-md-4 mb-3 text-center">
+          Submit to Reveal Your <br />Equity Potential
+        </h2>
+        <h2 class="fnt-20 fnt-roboto center text-center">
+          Accept a Cash offer or <br />
+          Register Equity Token
+        </h2>
+      </div>
+    </div>
+    <div class="col-md-2 d-md-flex justify-content-md-center mt-md-5 px-md-0 px-5 pb-md-0 pb-5">
+      <img src="../../../assets/images/a-person-holding-a-miniature-house-and-some-dollar.jpeg" alt="image"
+        class="rounded hide-in-sm c-img" width="400px" height="230px" />
+      <img src="../../../assets/images/a-person-holding-a-miniature-house-and-some-dollar.jpeg" alt="image"
+        class="rounded img-fluid d-md-none" width="400px" height="230px" />
     </div>
   </div>
 </div>

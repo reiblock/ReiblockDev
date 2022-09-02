@@ -15,3 +15,27 @@ body {
   font-size: 48px;
   font-family: "Cedarville Cursive", cursive;
 }
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .fnt-20 {
+    font-size: 20px;
+  }
+  .mob-con-1 {
+    background-color: #afcbed;
+  }
+  .hide-in-sm {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .m-img {
+    width: 200px;
+    height: 200px;
+  }
+  .b-img {
+    width: 400px;
+  }
+  .c-img {
+    width: 250px;
+  }
+}
