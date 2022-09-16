@@ -52,12 +52,13 @@ export class ContactComponent implements OnInit {
 
 
   handleAddressChange(address: Address) {
-    this.formattedAddress = address.formatted_address;
+    this.formattedAddress = address.name;
   }
 
   onSubject(data: any) {
-    let tempFormData = this.contactForm.value;
+    let tempFormData = this.contactForm.value;  
     tempFormData['subject'] = data;
+    tempFormData['address'] = this.formattedAddress
     this.userdataService.setValue(tempFormData);
     this.authService.sendSubject(tempFormData).subscribe((res: any) => {
       if (res) {

@@ -6,7 +6,7 @@
       </h2>
     </div>
     <div class="bg-white px-md-5 p-md-0 p-4">
-      <ng-container *ngIf="!cardStatus">
+      <ng-container *ngIf="!debtStatus">
         <div class="bg-white px-md-5 p-md-0 p-4">
           <h2 class="mb-md-4 fnt-lg-30">How much do you owe on this property?</h2>
           <div class="col col-md-6"><input type="text" id="debt value" placeholder="debt value"
@@ -16,9 +16,13 @@
       </ng-container>
       <ng-container *ngIf="cardStatus">
         <h2 class="mb-md-4 fnt-lg-30">Estimated Home value</h2>
-        <h2 class="mb-md-4 fnt-lg-30 txt-clra3" *ngIf="valueStatus">{{showEstimate.est_balance}}</h2>
+        <h2 class="mb-md-4 fnt-lg-30 txt-clra3" *ngIf="valueStatus">{{showEstimate.est_balance | currency}}</h2>
         <h2 class="mb-md-4 fnt-lg-30">Potential Equity Payout</h2>
-        <h2 class="mb-md-4 fnt-lg-30 txt-clra3" *ngIf="valueStatus">{{showEstimate.est_payout}}</h2>
+        <h2 class="mb-md-4 fnt-lg-30 txt-clra3" *ngIf="valueStatus">{{showEstimate.est_payout | currency}}</h2>
+      </ng-container>
+      <ng-container *ngIf="absentData">
+        <h2 class="mb-md-4 fnt-lg-30">We are not able to find the address which you have entered.</h2>
+        <button class="col-md-4 col-8 br-10 btn btn-raised mt-3" (click)="onBack()">Back</button>
       </ng-container>
     </div>
   </div>
