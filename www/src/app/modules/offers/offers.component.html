@@ -14,8 +14,10 @@
           <button class="col-md-4 col-8 br-10 btn btn-raised mt-3" (click)="onSubmit(debt.value)">Submit</button>
         </div>
       </ng-container>
-      <ng-container *ngIf="cardStatus">
+      <ng-container *ngIf="cardStatus">        
         <h2 class="mb-md-4 fnt-lg-30">Estimated Home value</h2>
+        <h2 class="mb-md-4 fnt-lg-30 txt-clra3" *ngIf="valueStatus">{{showEstimate?.est_homevalue | currency}}</h2>
+        <h2 class="mb-md-4 fnt-lg-30">Equity Balance in Property</h2>
         <h2 class="mb-md-4 fnt-lg-30 txt-clra3" *ngIf="valueStatus">{{showEstimate.est_balance | currency}}</h2>
         <h2 class="mb-md-4 fnt-lg-30">Potential Equity Payout</h2>
         <h2 class="mb-md-4 fnt-lg-30 txt-clra3" *ngIf="valueStatus">{{showEstimate.est_payout | currency}}</h2>
