@@ -12,11 +12,21 @@
     }
   }
 
-  .card {
-    max-width: 18.75rem;
-    max-height: 18.75rem;
-    background-color: #f9f9f9;
+ .card {
+  max-width: 18.75rem;
+  max-height: 18.75rem;
+  background-color: #f9f9f9;
+  display: flex; // enables flexbox
+  justify-content: center; // centers children horizontally
+  align-items: center; // centers children vertically
+  overflow: hidden; // prevents images from overflowing the card
+
+  img {
+    max-width: 100%; // ensures image doesn't exceed card width
+    max-height: 100%; // ensures image doesn't exceed card height
+    object-fit: cover; // keeps aspect ratio and covers the area
   }
+
 
   .get-offer-container {
     background-color: #eeeff1 !important;
